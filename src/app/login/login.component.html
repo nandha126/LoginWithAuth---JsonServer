@@ -1,0 +1,86 @@
+<div class="container d-grid">
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <p-card [style]="{ width: '360px' }">
+        <form [formGroup]="loginForm" (ngSubmit)="login(loginForm.value)">
+          <h2 class="title">Login with your Account</h2>
+          <div class="row mb-3">
+            <div class="col-sm-12">
+              <div class="form-group">
+                <p-inputGroup>
+                  <p-inputGroupAddon>
+                    <i class="pi pi-user"></i>
+                  </p-inputGroupAddon>
+                  <input pInputText formControlName="email" placeholder="Username" />
+                </p-inputGroup>
+                <small class="block p-error">
+                  @if(user.invalid && (user.dirty || user.touched)) {
+                  <div>
+                    @if(user.errors?.['required']) {
+                    Email is required.
+                    }
+                  </div>
+                  <div>
+                    @if(user.errors?.['email']) {
+                    Email should be valid.
+                    }
+                  </div>
+                  }
+                </small>
+              </div>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-sm-12">
+              <div class="form-group">
+                <p-inputGroup>
+                  <p-inputGroupAddon>
+                    <i class="pi pi-lock"></i>
+                  </p-inputGroupAddon>
+                  <input type="password" class="p-inputtext" formControlName="password" placeholder="Password" />
+                </p-inputGroup>
+                <small class="block p-error">
+                  @if(pwd.invalid && (pwd.dirty || pwd.touched)) {
+                  <div>
+                    @if(pwd.errors?.['required']) {
+                    Password is required.
+                    }
+                  </div>
+                  }
+                </small>
+              </div>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-sm-6 text-start">
+              <i class="fa-solid fa-circle-question cursor-pointer"></i>
+              <a class="ps-2 cursor-pointer" (click)="goToForgotPassword()">Forgot Password?</a>
+            </div>
+            <div class="col-sm-6 text-end">
+              <p-checkbox formControlName="rememberme" value="Remember me" inputId="ny" />
+              <label for="ny" class="ms-2">Remember me</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="form-group">
+                <div class="d-grid">
+                  <p-button label="Login" styleClass="w-full border-round" [disabled]="loginForm.invalid" type="submit"></p-button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-sm-12 text-center">
+              Don't have an account?
+              <a class="ps-2 cursor-pointer" (click)="goToRegister()">Register</a>
+            </div>
+          </div>
+        </form>
+      </p-card>
+    </div>
+  </div>
+  <div class="col-sm-12">
+
+  </div>
+</div>

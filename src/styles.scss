@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeicons/primeicons.css";
+
+* {
+  margin: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+body {
+  background: var(--app-light-blue) !important;
+}
+
+:root {
+  --app-grey :#f4f2ff;
+  --app-dark-grey: #b7b7b7;
+  --app-loginbox-color: #e6e6e68a;
+  --app-border-grey: #ccc;
+
+  --app-green:#23ae00;
+  --app-light-green: #bdffac;
+
+  --app-red: #fe2727;
+  --app-light-red: #ffd2d2;
+
+  --app-blue:#277ffe;
+  --app-light-blue: #B6C6FF;
+  --app-dark-blue: #1368e3;
+
+  --app-bs: #aecfff;
+  --app-text: #9b9b9b;
+}

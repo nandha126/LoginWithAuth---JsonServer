@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "fullName": "nandha",
+      "email": "nandha@gmail.com",
+      "password": "password",
+      "id": "1"
+    },
+    {
+      "id": "aa07",
+      "fullName": "Nandhakumar",
+      "email": "friday@mail.com",
+      "password": "1234"
+    },
+    {
+      "id": "6f6b",
+      "fullName": "Lex luthor",
+      "email": "lex.luthor@gmail.com",
+      "password": "1234"
+    }
+  ]
+}
